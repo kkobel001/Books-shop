@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import Card from '../components/molecules/Card';
 import { routes } from '../routes';
-import NavItemBar from '../components/organism/NavItemBar/NavItemBar';
 
 const Root = () => (
   <>
     <Router>
-      <NavItemBar />
+      <Card />
       <Switch>
         <Route exact path={routes.home} render={() => <Redirect to="/" />} />
         <Route exact path={routes.aboutus} />

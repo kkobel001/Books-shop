@@ -1,7 +1,10 @@
 {
   "extends": ["airbnb", "prettier", "prettier/react"],
   "env": {
-    "jest": true
+    "jest": true,
+    "browser": true,
+    "node": true,
+    "es6": true
   },
   "globals": {
     "document": true
@@ -21,7 +24,7 @@
     "import/resolver": {
       "node": {
         "paths": ["./src"],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js", ".jsx"]
       }
     }
   },

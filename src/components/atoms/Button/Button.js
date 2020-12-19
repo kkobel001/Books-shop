@@ -11,9 +11,15 @@ const Button = styled.button`
   width: 220px;
   height: 47px;
   border: none;
-  border-radius: 50px;
   text-transform: uppercase;
   font-size: 16px;
+
+  :hover,
+  active {
+    background-color: lightgreen;
+    color: white;
+    border-color: white;
+  }
 `;
 
 /* ${({ secondary }) =>

@@ -7,11 +7,9 @@ import LogoIcon from '../../../assets/images/logo.jpg';
 const StyledWrapper = styled.div`
   display: flex;
   padding-bottom: 15px;
-  /* right: 0;
-  top: 0; */
   justify-content: center;
   align-items: center;
-  background-color: pink;
+  background-color: transparent;
 `;
 const StyledNavbarLogo = styled.div`
   width: 100px;

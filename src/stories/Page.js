@@ -19,7 +19,7 @@ export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (
       </p>
       <p>Render pages with mock data. This makes it easy to build and review page states without needing to navigate to them in your app. Here are some handy patterns for managing page data in Storybook:</p>
       <ul>
-        <li>Use a higher-level connected component. Storybook helps you compose such data from the of child component stories</li>
+        <li>Use a higher-level connected component.</li>
         <li>Assemble data in the page component from your services. You can mock these services out using Storybook.</li>
       </ul>
       <p>

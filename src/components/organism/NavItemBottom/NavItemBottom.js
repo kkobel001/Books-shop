@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
-import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
+// import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
 
 const StyledMenuWrapper = styled.div`
   position: fixed;
@@ -44,7 +44,7 @@ function NavItemBottom() {
         Contact
       </NavigationLink>
       <MenuIcon />
-      <CloseOutlinedIcon />
+      {/* <CloseOutlinedIcon /> */}
     </StyledMenuWrapper>
 
     // i className={click ? 'fas fa-times' : 'fas fa-bars'} /> */}

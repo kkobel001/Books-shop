@@ -10,10 +10,22 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  @media (max-width: 1500px) {
+    width: 70px;
+    height: 50px;
+  }
+  @media (max-width: 1100px) {
+    border-color: red;
+  }
 `;
 const StyledNavbarLogo = styled.div`
   width: 100px;
   height: 100px;
+  /* 
+  @media (max-width: 1500px) {
+    width: 70px;
+    height: 50px;
+  } */
 `;
 
 const NavItemTop = () => (

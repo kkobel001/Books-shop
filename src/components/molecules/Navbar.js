@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { FaBars, FaTimes } from '@material-ui/icons/Menu';
-import LogoIcon from '../../assets/images/logo.jpg';
-import { Nav, NavMenu, NavbarConteiner, NavLogo, LogoImg, NavItem, MobileIcon } from './Navbar.elements';
+import { Link } from 'react-router-dom';
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
+// import LogoIcon from '../../assets/images/logo.jpg';
+import { Nav, NavbarConteiner, NavLogo, LogoImg, MobileIcon, NavMenu, NavItem, NavLinks } from './Navbar.elements';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -14,39 +15,45 @@ const Navbar = () => {
       <Nav>
         <NavbarConteiner>
           <NavLogo>
-            <NavLink to="/home">
-              <LogoImg src={LogoIcon} alt="logo" />
-            </NavLink>
+            <Link to="/home">
+              <LogoImg sssb alt="logo" />
+            </Link>
           </NavLogo>
-          <MobileIcon onClick={handleClick}>{click ? <FaTimes /> : <FaBars />}</MobileIcon>
-          <NavMenu onClick={handleClick} click={click}>
-            <NavItem>
-              <NavLink exact to="/home" activeclass="active">
-                Home
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink exact to="/about" activeclass="active">
-                Home
-              </NavLink>
-            </NavItem>
 
+          <MobileIcon onClick={handleClick}>{click ? <MenuIcon /> : <CloseIcon />}</MobileIcon>
+          <NavMenu onClick={handleClick}>
             <NavItem>
-              <NavLink exact to="/shop" activeclass="active">
+              <NavLinks exact to="/home" activeclass="active">
                 Home
-              </NavLink>
+              </NavLinks>
             </NavItem>
-
+          </NavMenu>
+          <NavMenu onClick={handleClick}>
             <NavItem>
-              <NavLink exact to="/gallery" activeclass="active">
+              <NavLinks exact to="/home" activeclass="active">
                 Home
-              </NavLink>
+              </NavLinks>
             </NavItem>
-
+          </NavMenu>
+          <NavMenu onClick={handleClick}>
             <NavItem>
-              <NavLink exact to="/contact" activeclass="active">
+              <NavLinks exact to="/home" activeclass="active">
                 Home
-              </NavLink>
+              </NavLinks>
+            </NavItem>
+          </NavMenu>
+          <NavMenu onClick={handleClick}>
+            <NavItem>
+              <NavLinks exact to="/home" activeclass="active">
+                Home
+              </NavLinks>
+            </NavItem>
+          </NavMenu>
+          <NavMenu onClick={handleClick}>
+            <NavItem>
+              <NavLinks exact to="/home" activeclass="active">
+                Home
+              </NavLinks>
             </NavItem>
           </NavMenu>
         </NavbarConteiner>

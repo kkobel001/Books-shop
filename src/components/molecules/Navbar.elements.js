@@ -32,7 +32,7 @@ export const LogoImg = styled.img`
   margin-right: auto;
 `;
 
-export const NavItem = styled.li`
+export const NavItem = styled.ul`
   height: 80px;
   border-bottom: 2px solid transparent;
 
@@ -41,7 +41,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLinks = styled.ul`
+export const NavLinks = styled.li`
   color: black;
   text-decoration: none;
   height: 80pc;

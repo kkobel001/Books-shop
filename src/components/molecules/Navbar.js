@@ -4,7 +4,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import LogoIcon from '../../assets/images/logo.jpg';
 import { Button } from '../atoms/Button/Button';
-import { Nav, NavbarConteiner, NavLogo, LogoImg, MobileIcon, NavMenu, NavItem, NavLinks, NavItemBtn, NavBtnLink } from './Navbar.elements';
+import { Nav, NavbarConteiner, NavLogo, LogoImg, MobileIcon, NavMenu, NavItem, NavLinks, NavItemBtn, NavBtnLink, NavLinksLogo } from './Navbar.elements';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -29,12 +29,12 @@ const Navbar = () => {
       <Nav>
         <NavbarConteiner>
           <NavLogo>
-            <NavLinks to="/home">
+            <NavLinksLogo to="/home">
               <LogoImg src={LogoIcon} alt="logo" />
-            </NavLinks>
+            </NavLinksLogo>
           </NavLogo>
-          <MobileIcon onClick={handleClick}>{click ? <MenuIcon /> : <CloseIcon />}</MobileIcon>
-          <NavMenu onClick={handleClick}>
+          <MobileIcon onClick={handleClick}>{click ? <CloseIcon /> : <MenuIcon />}</MobileIcon>
+          <NavMenu onClick={handleClick} click={click}>
             <NavItem>
               <NavLinks exact to="/home" activeclass="active">
                 Home
@@ -63,7 +63,7 @@ const Navbar = () => {
             <NavItemBtn>
               {button ? (
                 <NavBtnLink to="/sing-up">
-                  <Button primary>SIGN UP </Button>
+                  <Button dark>SIGN UP </Button>
                 </NavBtnLink>
               ) : (
                 <NavBtnLink to="/sign-out">

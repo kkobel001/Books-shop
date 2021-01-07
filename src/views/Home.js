@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import LogoBaner from '../assets/images/banner01.jpg';
+import Slider from '../components/atoms/Slider';
+import { SliderImages } from '../components/atoms/SliderImages';
 
 const StyledWrapper = styled.div`
   width: 100%;
   height: 600px;
-  background-image: url(${LogoBaner});
+  /* background-image: url(${LogoBaner}); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -20,7 +22,7 @@ const Home = () => (
   <>
     <StyledWrapper>
       <StyledPic>
-        {/* src={Baner}  */}
+        <Slider slides={SliderImages} />
         Welcone To Freshshop
       </StyledPic>
     </StyledWrapper>

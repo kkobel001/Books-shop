@@ -20,7 +20,8 @@
     ],
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "import/extensions": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "arrow-body-style": ["error", "as-needed"]
   },
   "settings": {
     "import/resolver": {

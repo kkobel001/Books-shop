@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import LogoBaner from '../assets/images/banner01.jpg';
 import Slider from '../components/atoms/Slider';
 import { SliderImages } from '../components/atoms/SliderImages';
+import LogoBaner from '../assets/images/banner01.jpg';
 
 const StyledWrapper = styled.div`
   width: 100%;

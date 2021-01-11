@@ -13,10 +13,19 @@ const StyledSrapperSlider = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 0;
+  height: 700px;
+  overflow: hidden;
+  transition-duration: 500;
 `;
+const proprietes = {
+  indicators: true,
+  scale: 1.4,
+};
 const StyledImage = styled.div`
-  height: 500px;
-  border-radius: 10px;
+  height: 700px;
+  width: 100%;
+  overflow: visible;
+  background-image: url(${SliderImages});
 `;
 const StyledArrowBackIosIcon = styled.div`
   position: absolute;
@@ -39,6 +48,10 @@ const StyledRightIcon = styled.div`
   cursor: pointer;
   user-select: none;
 `;
+// const StyledButton= styled(Button)`
+// margin-right:300px;
+// z-index:9999;
+// `;
 
 function Slider({ slides }) {
   const [current, setCurrent] = useState(0);
@@ -56,13 +69,19 @@ function Slider({ slides }) {
     return null;
   }
   return (
-    <StyledSrapperSlider>
+    <StyledSrapperSlider {...proprietes}>
       <StyledArrowBackIosIcon>
         <ArrowBackIosIcon onClick={prevSlide} />
       </StyledArrowBackIosIcon>
       <StyledRightIcon>
         <ChevronRightIcon onClick={nextSlide} />
       </StyledRightIcon>
+      {/* <StyledButton>
+
+      <Button>
+        Buy it !
+      </Button> 
+</StyledButton>  */}
       {SliderImages.map(slide => (
         <div className={slide.id === current ? '<slideactive />' : '<slide />'} key={slide.id}>
           {slide.id === current && (

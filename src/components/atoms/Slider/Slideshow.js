@@ -1,3 +1,19 @@
+import React from 'react';
+import BackgroundSlideshow from 'react-background-slideshow';
+import banner01 from '../../../assets/images/banner01.jpg';
+import banner02 from '../../../assets/images/banner02.jpg';
+import banner03 from '../../../assets/images/banner03.jpg';
+import { Button } from '../Button/Button';
+
+const Slideshow = () => (
+  <div>
+    <BackgroundSlideshow images={[banner01, banner02, banner03]} duration={10} transition={2} />
+    <Button hhhhhhhh />
+  </div>
+);
+
+export default Slideshow;
+
 // import React from 'react';
 // import {Slide} from 'react-slideshow-image';
 //  import styled from 'styled-components';

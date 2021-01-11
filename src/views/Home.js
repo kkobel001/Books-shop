@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Slider from '../components/atoms/Slider';
-import { SliderImages } from '../components/atoms/SliderImages';
+import Slider from '../components/atoms/Slider/Slider';
+import { SliderImages } from '../components/atoms/Slider/SliderImages';
 import LogoBaner from '../assets/images/banner01.jpg';
+import CardImage from '../components/molecules/Card/CardImage';
 
 const StyledWrapper = styled.div`
   width: 100%;
@@ -23,7 +24,7 @@ const Home = () => (
     <StyledWrapper>
       <StyledPic>
         <Slider slides={SliderImages} />
-        Welcone To Freshshop
+        <CardImage />
       </StyledPic>
     </StyledWrapper>
   </>

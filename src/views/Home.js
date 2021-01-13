@@ -7,7 +7,6 @@ import CardImage from '../components/molecules/Card/CardImage';
 
 const StyledWrapper = styled.div`
   width: 100%;
-  height: 600px;
   /* background-image: url(${LogoBaner}); */
   background-repeat: no-repeat;
   background-size: cover;

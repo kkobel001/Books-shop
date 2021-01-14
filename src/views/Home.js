@@ -11,7 +11,7 @@ const StyledWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  filter: brightness(60%);
+  /* filter: brightness(60%); */
 `;
 
 const StyledPic = styled.div`
@@ -23,7 +23,7 @@ const Home = () => (
     <StyledWrapper>
       <StyledPic>
         <Slider slides={SliderImages} />
-        <CardImage />
+        <CardImage name="Lorem ipsum dolor" />
       </StyledPic>
     </StyledWrapper>
   </>

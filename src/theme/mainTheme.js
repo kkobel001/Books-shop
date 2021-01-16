@@ -1,5 +1,5 @@
 export const theme = {
   light: 'hsl(0, 100%, 98%)',
-  medium: '#f8f9fa',
+  medium: 'hsl(0, 100%, 50%)',
   dark: '#343a40',
 };

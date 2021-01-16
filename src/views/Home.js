@@ -4,6 +4,8 @@ import Slider from '../components/atoms/Slider/Slider';
 import { SliderImages } from '../components/atoms/Slider/SliderImages';
 import LogoBaner from '../assets/images/banner01.jpg';
 import CardImage from '../components/molecules/Card/CardImage';
+import CardSmall from '../components/molecules/Card/CardSmall';
+import CardLarge from '../components/molecules/Card/CardLarge';
 
 const StyledWrapper = styled.div`
   width: 100%;
@@ -14,17 +16,13 @@ const StyledWrapper = styled.div`
   /* filter: brightness(60%); */
 `;
 
-const StyledPic = styled.div`
-  margin-top: auto;
-`;
-
 const Home = () => (
   <>
     <StyledWrapper>
-      <StyledPic>
-        <Slider slides={SliderImages} />
-        <CardImage name="Lorem ipsum dolor" />
-      </StyledPic>
+      <Slider slides={SliderImages} />
+      <CardImage name="Lorem ipsum dolor" />
+      <CardSmall />
+      <CardLarge about="Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis." />
     </StyledWrapper>
   </>
 );

@@ -18,6 +18,7 @@ const CardContainer = styled.div`
   padding-left: 340px;
   padding-right: 250px;
   width: 100%;
+  position: relative;
 
   @media screen and (max-width: 1290px) {
   }

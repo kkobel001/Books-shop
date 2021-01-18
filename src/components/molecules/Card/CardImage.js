@@ -11,6 +11,7 @@ const CardContainer = styled(Container)`
   background-color: #fafafa;
   padding-top: 90px;
   padding-bottom: 90px;
+  position: relative;
 
   ${Container}
 
@@ -37,7 +38,7 @@ const CardItemImage = styled.img`
 `;
 
 const CardText = styled.div`
-  background-color: #8ba35c;
+  background-color: #bac237;
   height: 50px;
   text-align: center;
   color: #ffffff;

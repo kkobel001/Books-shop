@@ -4,10 +4,16 @@ import PropTypes from 'prop-types';
 import blog01 from '../../../assets/images/blog-img-01.jpg';
 import blog02 from '../../../assets/images/blog-img-02.jpg';
 import blog03 from '../../../assets/images/blog-img.jpg';
+import ButtonIcon from '../../atoms/ButtonIcon/ButtonIcon';
+
 import { Container } from '../../../theme/GlobalStyle';
 
 const StyledContainer = styled(Container)`
   height: 830px;
+  background-color: #fafafa;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  ${Container};
 `;
 
 const StyledWrapper = styled.div`
@@ -16,11 +22,16 @@ const StyledWrapper = styled.div`
   display: grid;
   align-content: center;
   grid-template-columns: auto auto auto;
-  grid-gap: 10px;
+  grid-gap: 30px;
+  justify-items: center;
 `;
 
 const CardItem = styled.div`
-  margin: auto;
+  background-color: #5e6fc5;
+  height: 560px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 `;
 const CardItemImage = styled.img`
   height: 300px;
@@ -28,10 +39,14 @@ const CardItemImage = styled.img`
 `;
 
 const CardText = styled.div`
-  margin: auto;
+  text-align: center;
+
+  & p {
+    margin-top: 10px;
+  }
 `;
 
-function CardLarge({ about }) {
+function CardLarge({ title, about }) {
   return (
     <StyledContainer>
       <CardText>
@@ -41,15 +56,29 @@ function CardLarge({ about }) {
       <StyledWrapper>
         <CardItem>
           <CardItemImage src={blog01} alt="blogimg" />
-          <CardText>{about}</CardText>
+          <CardText>
+            {' '}
+            <h2>{title}</h2>
+            {about}
+          </CardText>
+          <ButtonIcon />
         </CardItem>
         <CardItem>
           <CardItemImage src={blog02} alt="blogimg" />
-          <CardText>{about}</CardText>
+          <CardText>
+            {' '}
+            <h2>{title}</h2>
+            {about}
+          </CardText>
+          <ButtonIcon />
         </CardItem>
         <CardItem>
           <CardItemImage src={blog03} alt="blogimg" />
-          <CardText>{about}</CardText>
+          <CardText>
+            <h2>{title}</h2>
+            {about}
+          </CardText>
+          <ButtonIcon />
         </CardItem>
       </StyledWrapper>
     </StyledContainer>
@@ -58,6 +87,7 @@ function CardLarge({ about }) {
 
 CardLarge.propTypes = {
   about: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default CardLarge;

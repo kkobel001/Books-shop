@@ -22,7 +22,10 @@ const Home = () => (
       <Slider slides={SliderImages} />
       <CardImage name="Lorem ipsum dolor" />
       <CardSmall />
-      <CardLarge about="Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis." />
+      <CardLarge
+        title="Fusce in augue non nisi fringilla"
+        about="Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis."
+      />
     </StyledWrapper>
   </>
 );

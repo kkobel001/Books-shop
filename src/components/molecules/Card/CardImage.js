@@ -7,20 +7,18 @@ import im02 from '../../../assets/images/img_02.jpg';
 import im03 from '../../../assets/images/img_03.jpg';
 
 const CardContainer = styled(Container)`
-  height: 700px;
+  height: 100%;
   background-color: #fafafa;
   padding-top: 90px;
   padding-bottom: 90px;
   position: relative;
 
-  ${Container}
-
-  @media screen and (max-width: 1290px) {
+  ${Container} /* @media screen and (max-width: 1290px) {
     height: 1500px;
-  }
+  } */
 `;
 const StyledWrapper = styled.div`
-  height: 520px;
+  height: 100%;
   width: 100%;
   display: grid;
   align-content: center;

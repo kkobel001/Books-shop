@@ -6,13 +6,17 @@ import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 
 const StyledWrapper = styled.div`
   height: 34px;
-  width: 100%;
+  width: 350px;
+  margin-top: 50px;
 
   & a {
     text-decoration: none;
   }
   & ul {
+    height: 100%;
     list-style-type: none;
+    /* padding-left:40px;
+    padding-right:40px; */
   }
   & li {
     float: left;

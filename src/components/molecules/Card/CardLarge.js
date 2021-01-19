@@ -9,7 +9,7 @@ import ButtonIcon from '../../atoms/ButtonIcon/ButtonIcon';
 import { Container } from '../../../theme/GlobalStyle';
 
 const StyledContainer = styled(Container)`
-  height: 830px;
+  height: 100%;
   background-color: #fafafa;
   padding-top: 90px;
   padding-bottom: 90px;
@@ -17,19 +17,22 @@ const StyledContainer = styled(Container)`
 `;
 
 const StyledWrapper = styled.div`
-  height: 720px;
-  width: 580px;
+  height: 100%;
+  width: 100%;
   display: grid;
   align-content: center;
   grid-template-columns: auto auto auto;
-  grid-gap: 30px;
+  /* grid-gap: 50px; */
   justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
 `;
 
 const CardItem = styled.div`
   background-color: #5e6fc5;
   height: 560px;
-  width: 100%;
+  width: 350px;
   margin-left: auto;
   margin-right: auto;
 `;
@@ -40,17 +43,25 @@ const CardItemImage = styled.img`
 
 const CardText = styled.div`
   text-align: center;
-
+  letter-spacing: 2px;
+  & h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
   & p {
     margin-top: 10px;
+    letter-spacing: 0px;
   }
 `;
+
+const StyledButtonIcon = styled(ButtonIcon)``;
 
 function CardLarge({ title, about }) {
   return (
     <StyledContainer>
       <CardText>
-        <h1>latest blog</h1>
+        <h2>latest blog</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
       </CardText>
       <StyledWrapper>
@@ -58,7 +69,7 @@ function CardLarge({ title, about }) {
           <CardItemImage src={blog01} alt="blogimg" />
           <CardText>
             {' '}
-            <h2>{title}</h2>
+            <h1>{title}</h1>
             {about}
           </CardText>
           <ButtonIcon />
@@ -66,8 +77,7 @@ function CardLarge({ title, about }) {
         <CardItem>
           <CardItemImage src={blog02} alt="blogimg" />
           <CardText>
-            {' '}
-            <h2>{title}</h2>
+            <h1>{title}</h1>
             {about}
           </CardText>
           <ButtonIcon />
@@ -75,10 +85,10 @@ function CardLarge({ title, about }) {
         <CardItem>
           <CardItemImage src={blog03} alt="blogimg" />
           <CardText>
-            <h2>{title}</h2>
+            <h1>{title}</h1>
             {about}
           </CardText>
-          <ButtonIcon />
+          <StyledButtonIcon />
         </CardItem>
       </StyledWrapper>
     </StyledContainer>

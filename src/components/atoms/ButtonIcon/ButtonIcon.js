@@ -8,6 +8,7 @@ const StyledWrapper = styled.div`
   height: 34px;
   width: 350px;
   margin-top: 50px;
+  padding-left: 120px;
 
   & a {
     text-decoration: none;

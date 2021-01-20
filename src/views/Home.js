@@ -6,6 +6,7 @@ import LogoBaner from '../assets/images/banner01.jpg';
 import CardImage from '../components/molecules/Card/CardImage';
 import CardSmall from '../components/molecules/Card/CardSmall';
 import CardLarge from '../components/molecules/Card/CardLarge';
+import Footer from '../components/molecules/Footer/Footer';
 
 const StyledWrapper = styled.div`
   width: 100%;
@@ -26,6 +27,7 @@ const Home = () => (
         title="Fusce in augue non nisi fringilla"
         about="Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis."
       />
+      <Footer />
     </StyledWrapper>
   </>
 );

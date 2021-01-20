@@ -27,14 +27,23 @@ const StyledWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
+
+  @media screen and (max-width: 1290px) {
+    display: block;
+  }
 `;
 
 const CardItem = styled.div`
-  background-color: #5e6fc5;
+  background-color: #f5f5f5;
   height: 560px;
   width: 350px;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 1290px) {
+    margin-top: 20px;
+  }
 `;
 const CardItemImage = styled.img`
   height: 300px;
@@ -44,6 +53,7 @@ const CardItemImage = styled.img`
 const CardText = styled.div`
   text-align: center;
   letter-spacing: 2px;
+
   & h1 {
     font-size: 20px;
     margin-bottom: 10px;

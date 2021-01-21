@@ -1,6 +1,5 @@
-// import React, {Component} from 'react';
+// import React from 'react';
 // import styled from 'styled-components';
-
 // import FacebookIcon from '@material-ui/icons/Facebook';
 // import TwitterIcon from '@material-ui/icons/Twitter';
 // import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -36,31 +35,33 @@
 //   }
 // `;
 
-// class SocialMediaIcons extends Component {
-//  render() {
+// // class SocialMediaIcons extends Component {
+// //  render() {
 
-//    const { data} = this.props;
+// //    const { data} = this.props;
 
-//    const namesList = data.map(name=>{
-//      return (
-//        <li>{name.name}</li>
-//      )
-//   })
+// //    const namesList = data.map(name=>{
+// //      return (
+// //        <li>{name.name}</li>
+// //      )
+// //   })
+// function SocialMediaIcons() {
+//  return (
 
-// return (
 //     <Wrapper>
 
-//         <ul>
-//             <li>{TwitterIcon }</li>
-//             <li>{FacebookIcon}</li>
-//             <li>{LinkedInIcon}</li>
-//             <li>{WhatsAppIcon }</li>
-//             <li>{InstagramIcon}</li>
-//             <li>{YouTubeIcon}</li>
-//         </ul>
-//     </Wrapper>
-// );
-//  }
-// }
+//     <ul>
+//         <li>{TwitterIcon }</li>
+//         <li>{FacebookIcon}</li>
+//         <li>{LinkedInIcon}</li>
+//         <li>{WhatsAppIcon }</li>
+//         <li>{InstagramIcon}</li>
+//         <li>{YouTubeIcon}</li>
+//     </ul>
+// </Wrapper>
+
+//  )
+
+// };
 
 // export default SocialMediaIcons;

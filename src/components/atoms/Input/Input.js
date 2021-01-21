@@ -2,16 +2,18 @@ import styled, { css } from 'styled-components';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 export const Input = styled.input`
-  padding: 0px 20px 0px 20px;
+  padding: 0px 50px 0px 10px;
   font-size: 14px;
-  height:40px;
-  width:310px;
+  height:38px;
+  width:100%;
    background-color: #f0efef;
   border: none;
   background-image: url(${MailOutlineIcon});
-    text-transform: uppercase;
+   border-radius: 3px;
     letter-spacing: 1px;
     color:#000000;
+    
+  
 
    /* ${({ search }) =>
      search &&

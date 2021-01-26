@@ -1,5 +1,10 @@
 import React from 'react';
+import Tittlebox from '../components/atoms/Tittlebox/Tittlebox';
 
-const Galerry = () => <p>Gallery</p>;
+const Galerry = () => (
+  <>
+    <Tittlebox pagename="GALLERY" page="GALLERY" />
+  </>
+);
 
 export default Galerry;

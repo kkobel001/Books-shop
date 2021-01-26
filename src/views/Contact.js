@@ -1,5 +1,10 @@
 import React from 'react';
+import Tittlebox from '../components/atoms/Tittlebox/Tittlebox';
 
-const Contact = () => <p>Contact</p>;
+const Contact = () => (
+  <>
+    <Tittlebox pagename="CONTACT" page="CONTACT" />
+  </>
+);
 
 export default Contact;

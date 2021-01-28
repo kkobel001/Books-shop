@@ -96,6 +96,18 @@ const StyledList = styled.ul`
       color: #ffffff;
       box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
     }
+    @media screen and (max-width: 1580px) {
+      font-size: 13px;
+      margin: 15px;
+
+      ::before {
+        width: 70%;
+      }
+    }
+    @media screen and (max-width: 1280px) {
+      display: block;
+      width: 100%;
+    }
   }
   & h2 {
     margin-top: 4px;

@@ -1,19 +1,25 @@
 import React from 'react';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+// import VisibilityIcon from '@material-ui/icons/Visibility';
+// import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import ButtonIcon from './ButtonIcon';
 
-export default {
-  title: 'Example/ButtonIcon',
-  component: ButtonIcon,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-    title: 'My Card',
-  },
-};
+export const Primary = () => <ButtonIcon> icon={FavoriteBorderIcon} </ButtonIcon>;
 
-const Template = args => <ButtonIcon {...args} />;
+// export default {
+//   title: 'Example/ButtonIcon',
+//   component: ButtonIcon,
+//   argTypes: {
+//     backgroundColor: { control: 'color' },
+//     title: 'My Card',
+//   },
+// };
 
-export const Simple = Template.bind({});
-Simple.args = {
-  primary: true,
-  label: 'Button',
-};
+// const Template = args => <ButtonIcon {...args} icon={FavoriteBorderIcon} />;
+
+// export const Simple = Template.bind({});
+// Simple.args = {
+//   primary: true,
+//   label: 'Button',
+
+// };

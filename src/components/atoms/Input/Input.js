@@ -6,22 +6,23 @@ export const Input = styled.input`
   font-size: 14px;
   height:38px;
   width:100%;
-   background-color: #f0efef;
+  background-color: #ffffff;
   border: none;
-  background-image: url(${MailOutlineIcon});
+  /* background-image: url(${MailOutlineIcon}); */
    border-radius: 3px;
     letter-spacing: 1px;
     color:#000000;
     
-  
+    /* ${({ theme }) => theme.light}; */
 
-   /* ${({ search }) =>
-     search &&
-     css`
-       padding: 10px 20px 10px 40px;
-       background-image: url(${MailOutlineIcon});
-       background-size: 20px;
-       bakcground-position: 10px 50%;
-       background-repeat: no-repeat;
-     `}  */
+    ${({ search }) =>
+      search &&
+      css`
+        padding: 10px 20px 10px 40px;
+        font-size: ${({ theme }) => theme.fontSize.xs};
+        background-image: url(${MailOutlineIcon});
+        background-size: 15px;
+        background-position: 15px 50%;
+        background-repeat: no-repeat;
+      `}
     `;

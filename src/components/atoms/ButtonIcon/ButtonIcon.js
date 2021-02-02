@@ -1,14 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 
+// const ButtonIcon = styled.button`
+// height: 34px;
+// width: 34px;
+// background-image: url (${({icon}) => icon });
+// text-align: center;
+// background-repeat: no-repeat;
+// background-position: 50% 50%;
+// background-size: 40%;
+
+//     &:hover {
+//       background-color: ${({ theme }) =>  theme.primary};
+//     }
+
 const StyledWrapper = styled.div`
+justify-content:center;
   height: 34px;
   width: 350px;
   margin-top: 50px;
   padding-left: 120px;
+  border-radius: ${({ light }) => (light ? '#ffffff' : '')}
 
   & a {
     text-decoration: none;
@@ -26,9 +42,9 @@ const StyledWrapper = styled.div`
     margin-right: 3px;
     background-color: #000000;
     text-align: center;
-
+    /* ${({ primary }) => (primary ? '#2b462e' : '#BAC237')} */
     &:hover {
-      background-color: #bac237;
+      /* background-color: ${({ primary }) => (primary ? '#BAC237' : '#00fbff')}; */
     }
   }
 `;

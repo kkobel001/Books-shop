@@ -1,32 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 
-// const ButtonIcon = styled.button`
-// height: 34px;
-// width: 34px;
-// background-image: url (${({icon}) => icon });
-// text-align: center;
-// background-repeat: no-repeat;
-// background-position: 50% 50%;
-// background-size: 40%;
-
-//     &:hover {
-//       background-color: ${({ theme }) =>  theme.primary};
-//     }
-
 const StyledWrapper = styled.div`
-justify-content:center;
+  justify-content: center;
   height: 34px;
   width: 350px;
-  margin-top: 50px;
+  margin-top: 30px;
   padding-left: 120px;
-  border-radius: ${({ light }) => (light ? '#ffffff' : '')}
-
-  & a {
+  border-radius: ${({ light }) => (light ? '#ffffff' : '')} & a {
     text-decoration: none;
   }
   & ul {
@@ -37,49 +23,42 @@ justify-content:center;
   }
   & li {
     float: left;
-    height: 34px;
+    /* height: 34px; */
     width: 34px;
     margin-right: 3px;
-    background-color: #000000;
     text-align: center;
-    /* ${({ primary }) => (primary ? '#2b462e' : '#BAC237')} */
+    padding-top: 6px;
     &:hover {
-      /* background-color: ${({ primary }) => (primary ? '#BAC237' : '#00fbff')}; */
+      background-color: ${({ primary }) => (primary ? 'transparent' : '#BAC237')};
     }
   }
 `;
 
-const StyledFavoriteBorderIcon = styled(FavoriteBorderIcon)`
-  color: #ffffff;
-  margin-top: 3.5px;
-`;
-const StyledVisibilityIcon = styled(VisibilityIcon)`
-  color: #ffffff;
-  margin-top: 3.5px;
-`;
+export const StyledFavoriteBorderIcon = styled(NavLink)`
+  color: #000000;
 
-const StyledChatBubbleOutlineIcon = styled(ChatBubbleOutlineIcon)`
-  color: #ffffff;
-  margin-top: 3.5px;
+  :hover {
+    color: #ffffff;
+  }
 `;
 
 const ButtonIcon = () => (
   <StyledWrapper>
     <ul>
       <li>
-        <a href="./">
-          <StyledFavoriteBorderIcon />
-        </a>
+        <StyledFavoriteBorderIcon to="./">
+          <FavoriteBorderIcon />
+        </StyledFavoriteBorderIcon>
       </li>
       <li>
-        <a href="./">
-          <StyledVisibilityIcon />
-        </a>
+        <StyledFavoriteBorderIcon to="./">
+          <VisibilityIcon />
+        </StyledFavoriteBorderIcon>
       </li>
       <li>
-        <a href="./">
-          <StyledChatBubbleOutlineIcon />
-        </a>
+        <StyledFavoriteBorderIcon to="./">
+          <ChatBubbleOutlineIcon />
+        </StyledFavoriteBorderIcon>
       </li>
     </ul>
   </StyledWrapper>

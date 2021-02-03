@@ -13,7 +13,7 @@ export const Button = styled.button`
 
   &:hover {
     transition: all 0.3s ease-out;
-    background-color: #000000;
+    background-color: #808080;
   }
 
   /* display: flex;

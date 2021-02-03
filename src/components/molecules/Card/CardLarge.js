@@ -82,7 +82,7 @@ function CardLarge({ title, about }) {
             <h1>{title}</h1>
             {about}
           </CardText>
-          <ButtonIcon />
+          <StyledButtonIcon primary />
         </CardItem>
         <CardItem>
           <CardItemImage src={blog02} alt="blogimg" />
@@ -98,7 +98,7 @@ function CardLarge({ title, about }) {
             <h1>{title}</h1>
             {about}
           </CardText>
-          <StyledButtonIcon />
+          <ButtonIcon />
         </CardItem>
       </StyledWrapper>
     </StyledContainer>

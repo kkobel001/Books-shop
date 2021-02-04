@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import UserPageTemplate from '../templates/UserPageTemplates';
 import Slider from '../components/atoms/Slider/Slider';
 import { SliderImages } from '../components/atoms/Slider/SliderImages';
 import LogoBaner from '../assets/images/banner01.jpg';
@@ -19,6 +20,7 @@ const StyledWrapper = styled.div`
 
 const Home = () => (
   <>
+    <UserPageTemplate />
     <StyledWrapper>
       <Slider slides={SliderImages} />
       <CardImage name="Lorem ipsum dolor" />

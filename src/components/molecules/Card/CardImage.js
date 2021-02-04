@@ -22,8 +22,7 @@ const StyledWrapper = styled.div`
   width: 100%;
   display: grid;
   align-content: center;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
 
   @media screen and (max-width: 1290px) {
     display: block;

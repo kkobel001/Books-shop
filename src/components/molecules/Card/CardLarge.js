@@ -21,7 +21,7 @@ const StyledWrapper = styled.div`
   width: 100%;
   display: grid;
   align-content: center;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
   /* grid-gap: 50px; */
   justify-items: center;
   margin-left: auto;

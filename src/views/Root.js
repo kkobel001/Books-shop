@@ -5,7 +5,7 @@ import Home from './Home';
 import About from './About';
 import Shop from './Shop';
 import Contact from './Contact';
-import Gallery from './Gallery';
+import Gallery from './Gallery/Gallery';
 
 // import { routes } from '../routes';s
 

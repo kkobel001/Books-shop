@@ -4,7 +4,7 @@ import MainTemplate from '../templates/MainTemplate';
 import Home from './Home';
 import About from './About';
 import Shop from './Shop';
-import Contact from './Contact';
+import Contact from './Contact/Contact';
 import Gallery from './Gallery/Gallery';
 
 // import { routes } from '../routes';s

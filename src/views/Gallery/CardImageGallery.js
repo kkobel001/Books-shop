@@ -13,24 +13,21 @@ const StyledWrapper = styled.div`
   margin-top: 0px;
   background-color: #1100ff;
   height: 700px;
-  width: 80%;
+  /* width: 80%; */
   margin-left: auto;
   margin-right: auto;
 `;
 
 const StyledItem = styled.div`
-  height: 70px;
-  margin: 0px;
+  height: 250px;
+  width: 250px;
+
   display: grid;
   align-content: center;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  /* grid-gap: 10px; */
 `;
 
-// const StyledPic= styled.img`
-// height:250px;
-// width:250px;
-// `;
 const CardImageGallery = () => (
   <StyledContainer>
     <StyledWrapper>

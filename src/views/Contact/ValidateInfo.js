@@ -12,5 +12,11 @@ export default function validateInfo(values) {
   } else if (!/^[A-Z0-9.%+-]+@[A-Z0-9.%+-]+\.[A-Z]{2,}$/i.text(values.email)) {
     errors.emial = 'Email address is incalid';
   }
+
+  if (!values.text) {
+    errors.text = 'Email required';
+  } else if (values.text.length > 30) {
+    errors.text = 'Text is incalid';
+  }
   return errors;
 }

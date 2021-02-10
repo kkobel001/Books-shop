@@ -5,11 +5,10 @@ const useForm = validate => {
     username: '',
     email: '',
     subject: '',
-    message: '',
+    text: '',
   });
 
   const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -21,10 +20,9 @@ const useForm = validate => {
   const handleSubmit = e => {
     e.preventDefault();
     setErrors(validate(values));
-    setIsSubmitting(true);
   };
 
-  return { handleChange, values, handleSubmit, errors, isSubmitting };
+  return { handleChange, values, handleSubmit, errors };
 };
 
 export default useForm;

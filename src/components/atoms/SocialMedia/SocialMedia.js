@@ -21,7 +21,7 @@ const Styledul = styled.ul`
     height: 37px;
     width: 37px;
     margin-right: 3px;
-    background-color: #000000;
+    background-color: transparent;
     padding-top: 20px;
     margin-right: 15px;
   }

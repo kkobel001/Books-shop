@@ -13,8 +13,9 @@ const StyledContainer = styled(Container)`
   background-color: rgb(1, 1, 1);
 `;
 const StyledWrapper = styled.div`
-  margin-left: 100px;
-  margin-right: 100px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   height: 100%;
   display: grid;
   grid-template-columns: auto auto auto;

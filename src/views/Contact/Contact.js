@@ -12,20 +12,18 @@ import { Container } from '../../theme/GlobalStyle';
 
 const StyledContainer = styled(Container)`
   ${Container};
-  height: 800px;
+  height: 700px;
   justify-content: center;
 `;
 const StyledWrapper = styled.div`
   width: 80%;
   height: 550px;
-  padding-top: 150px;
+  margin-top: 150px;
+  margin-bottom: 150px;
   margin-left: auto;
   margin-right: auto;
-  /* z-index:9999999; */
-
   display: flex;
   flex-wrap: wrap;
-
   text-align: center;
 `;
 
@@ -35,35 +33,32 @@ const StyledFormInfo = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  z-index: 0;
   padding: 50px;
   flex: 40%;
   color: #ffffff;
+  justify-content: center;
+  height: 550px;
+  position: relative;
+  width: 100%;
 
   ::before {
-    /* background-color: #222127; */
-    content: '';
-    /* position: absolute; */
+    background: rgba(0, 0, 0, 0.8);
+    content: ''; // ::before and ::after both require content
+    position: absolute;
     z-index: 0;
-    opacity: 0.7;
+    top: 0;
+    left: 0;
     width: 100%;
-    /* height: 400px; */
-    left: 0px;
-    top: 0px;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 0;
   }
-
-  /* float:right; */
 `;
 
 const StyledForm = styled.div`
   background-color: #f1f1f1;
   padding: 50px;
   flex: 60%;
-
-  /* width:400px;
-     height:500px;
-     background:#ccc;
-     margin:0; */
 `;
 const StyledFormInput = styled.div`
   line-height: 60px;
@@ -71,8 +66,21 @@ const StyledFormInput = styled.div`
 const StyledInput = styled.input`
   margin-top: auto;
   color: #1e00ff;
-  & ::placeholder {
+
+  &::placeholder {
     margin-left: 6px;
+  }
+`;
+const StyledFormText = styled.div`
+  position: relative;
+  padding-top: 85px;
+  padding-bottom: 100px;
+  height: 100%;
+
+  & p {
+    line-height: 200%;
+    text-align: justify;
+    margin-bottom: 15px;
   }
 `;
 
@@ -111,10 +119,11 @@ const Contact = () => {
             <Button type="Submit">Send Message</Button>
           </StyledForm>
           <StyledFormInfo>
-            <h1>Contact Info</h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate.</p>
-
-            <SocialMedia />
+            <StyledFormText>
+              <h1>Contact Info</h1>
+              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate.</p>
+              <SocialMedia />
+            </StyledFormText>
           </StyledFormInfo>
         </StyledWrapper>
       </StyledContainer>
@@ -124,4 +133,7 @@ const Contact = () => {
   );
 };
 
+// Contact.propTypes = {
+//   margL: PropTypes.string.isRequired,
+// };
 export default Contact;

@@ -48,6 +48,10 @@
     "sourceType": "module",
     "allowImportExportEverywhere": true
   }
+//   "prefer-const": ["error", {
+//     "destructuring": "any",
+//     "ignoreReadBeforeAssign": false
+// }]
 }
 
 // {

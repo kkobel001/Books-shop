@@ -5,7 +5,7 @@ import Tittlebox from '../../components/atoms/Tittlebox/Tittlebox';
 import { Button } from '../../components/atoms/Button/Button';
 import SocialMedia from '../../components/atoms/SocialMedia/SocialMedia';
 import useForm from './useForm';
-import validate from './ValidateInfo';
+import validate from './validateInfo';
 import orangeFruit from '../../assets/images/instagram-img-03.jpg';
 import Footer from '../../components/molecules/Footer/Footer';
 import { Container } from '../../theme/GlobalStyle';
@@ -62,13 +62,17 @@ const StyledForm = styled.div`
 `;
 const StyledFormInput = styled.div`
   line-height: 60px;
+
+  /* &::placeholder{
+    background-color: #015B2D;
+  } */
 `;
 const StyledInput = styled.input`
   margin-top: auto;
   color: #1e00ff;
-
+  background-color: #015b2d;
   &::placeholder {
-    margin-left: 6px;
+    background-color: #015b2d;
   }
 `;
 const StyledFormText = styled.div`
@@ -97,7 +101,7 @@ const Contact = () => {
             <h1>GET IN TOUCH</h1>
             <StyledFormInput onSubmit={handleSubmit}>
               <label htmlFor="username">
-                Your name
+                <p>Your name</p>
                 <StyledInput id="username" type="text" name="username" placeholder=" Enter your name" value={values.username} onChange={handleChange} />
                 {errors.username && <p>{errors.username}</p>}
               </label>
@@ -113,7 +117,7 @@ const Contact = () => {
             </StyledFormInput>
             <StyledFormInput>
               <label htmlFor="text">Your message</label>
-              <textarea id="text" type="text" name="message" placeholder="Your message" value={values.text} onChange={handleChange} />
+              <textarea id="text" type="text" name="message" placeholder="Your message" maxLength={30} value={values.text} onChange={handleChange} />
               {errors.text && <p>{errors.text}</p>}
             </StyledFormInput>
             <Button type="Submit">Send Message</Button>

@@ -19,6 +19,7 @@ const useForm = validate => {
   };
   const handleSubmit = e => {
     e.preventDefault();
+
     setErrors(validate(values));
   };
 

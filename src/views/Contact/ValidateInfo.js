@@ -10,13 +10,13 @@ export default function validateInfo(values) {
   if (!values.email) {
     errors.email = 'Email required';
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-    errors.emial = 'Email address is incalid';
+    errors.emial = 'Email address is invalid';
   }
 
-  if (!values.text) {
-    errors.text = 'Email required';
-  } else if (values.text.length < 30) {
-    errors.text = 'Text is incalid';
+  if (!values.message) {
+    errors.text = 'Text required';
+  } else if (values.message.length < 30) {
+    errors.message = 'Text is invalid';
   }
   return errors;
 }

@@ -9,6 +9,7 @@ import validate from './validateInfo';
 import orangeFruit from '../../assets/images/instagram-img-03.jpg';
 import Footer from '../../components/molecules/Footer/Footer';
 import { Container } from '../../theme/GlobalStyle';
+// import FormMessageSuccess from './FormMessageSuccess';
 
 const StyledContainer = styled(Container)`
   ${Container};
@@ -55,7 +56,7 @@ const StyledFormInfo = styled.div`
   }
 `;
 
-const StyledForm = styled.div`
+const StyledForm = styled.form`
   background-color: #f1f1f1;
   padding: 50px;
   flex: 60%;
@@ -69,10 +70,18 @@ const StyledFormInput = styled.div`
 `;
 const StyledInput = styled.input`
   margin-top: auto;
-  color: #1e00ff;
-  background-color: #015b2d;
+  color: #064e2a;
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 100%;
+  border: none;
+
+  /* background-color: #015b2d; */
   &::placeholder {
-    background-color: #015b2d;
+    font-size: 12px;
   }
 `;
 const StyledFormText = styled.div`
@@ -87,39 +96,58 @@ const StyledFormText = styled.div`
     margin-bottom: 15px;
   }
 `;
+const StyledLabel = styled.div`
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 3px;
 
+  & p {
+    text-align: left;
+  }
+`;
 const Contact = () => {
-  const { handleChange, values, handleSubmit, errors } = useForm(validate);
+  const { handleChange, handleSubmit, values, errors } = useForm(validate);
+  // const [isSubmiited, setIsSubmitted] = useState(false);
 
+  // function submitForm(){
+  //   setIsSubmitted(true);
+  // }
   return (
     <>
       <UserPageTemplate />
       <Tittlebox pagename="CONTACT" page="CONTACT" />
       <StyledContainer>
         <StyledWrapper>
-          <StyledForm>
+          <StyledForm onSubmit={handleSubmit}>
             <h1>GET IN TOUCH</h1>
-            <StyledFormInput onSubmit={handleSubmit}>
-              <label htmlFor="username">
+            <StyledFormInput>
+              <StyledLabel htmlFor="username">
                 <p>Your name</p>
-                <StyledInput id="username" type="text" name="username" placeholder=" Enter your name" value={values.username} onChange={handleChange} />
-                {errors.username && <p>{errors.username}</p>}
-              </label>
+              </StyledLabel>
+              <StyledInput id="username" type="text" name="username" placeholder=" Enter your name" value={values.username} onChange={handleChange} />
+              {errors.username && <p>{errors.username}</p>}
             </StyledFormInput>
             <StyledFormInput>
-              <label htmlFor="email">Your Email</label>
-              <input id="email" type="email" name="email" placeholder="Enter your username" value={values.email} onChange={handleChange} />
+              <label htmlFor="email">
+                <p>Your Email</p>
+              </label>
+              <StyledInput id="email" type="email" name="email" placeholder="Enter your username" value={values.email} onChange={handleChange} />
               {errors.email && <p>{errors.email}</p>}
             </StyledFormInput>
             <StyledFormInput>
-              <label htmlFor="subject">Subject</label>
-              <input id="subject" type="subject" name="subject" placeholder="Subject" value={values.subject} onChange={handleChange} />
+              <label htmlFor="email">
+                <p>Subject</p>
+              </label>
+              <StyledInput id="subject" type="subject" name="subject" placeholder="Subject" value={values.subject} onChange={handleChange} />
             </StyledFormInput>
             <StyledFormInput>
-              <label htmlFor="text">Your message</label>
-              <textarea id="text" type="text" name="message" placeholder="Your message" maxLength={30} value={values.text} onChange={handleChange} />
-              {errors.text && <p>{errors.text}</p>}
+              <label htmlFor="email">
+                <p>Your Email</p>
+              </label>
+              <StyledInput id="message" type="message" name="message" placeholder="Enter your your message" value={values.message} onChange={handleChange} />
+              {errors.message && <p>{errors.message}</p>}
             </StyledFormInput>
+
             <Button type="Submit">Send Message</Button>
           </StyledForm>
           <StyledFormInfo>

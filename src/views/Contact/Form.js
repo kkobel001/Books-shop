@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { Button } from '../../components/atoms/Button/Button';
 import SocialMedia from '../../components/atoms/SocialMedia/SocialMedia';
 import useForm from './useForm';
@@ -16,7 +17,7 @@ const StyledFormInfo = styled.div`
   flex: 40%;
   color: #ffffff;
   justify-content: center;
-  height: 550px;
+
   position: relative;
   width: 100%;
 
@@ -84,13 +85,8 @@ const StyledLabel = styled.div`
   }
 `;
 
-const Form = () => {
-  const { handleChange, handleSubmit, values, errors } = useForm(validate);
-  // const [isSubmiited, setIsSubmitted] = useState(false);
-
-  // function submitForm(){
-  //   setIsSubmitted(true);
-  // };
+const Form = ({ submitForm }) => {
+  const { handleChange, handleSubmit, values, errors } = useForm(submitForm, validate);
   return (
     <>
       <StyledForm onSubmit={handleSubmit}>
@@ -103,32 +99,26 @@ const Form = () => {
           {errors.username && <p>{errors.username}</p>}
         </StyledFormInput>
         <StyledFormInput>
-          <label htmlFor="email">
+          <StyledLabel htmlFor="email">
             <p>Your Email</p>
-          </label>
+          </StyledLabel>
           <StyledInput id="email" type="email" name="email" placeholder="Enter your username" value={values.email} onChange={handleChange} />
           {errors.email && <p>{errors.email}</p>}
         </StyledFormInput>
         <StyledFormInput>
-          <label htmlFor="email">
+          <StyledLabel htmlFor="email">
             <p>Subject</p>
-          </label>
+          </StyledLabel>
           <StyledInput id="subject" type="subject" name="subject" placeholder="Subject" value={values.subject} onChange={handleChange} />
         </StyledFormInput>
         <StyledFormInput>
-          <label htmlFor="email">
+          <StyledLabel htmlFor="email">
             <p>Your Email</p>
-          </label>
+          </StyledLabel>
           <StyledInput id="message" type="message" name="message" placeholder="Enter your your message" value={values.message} onChange={handleChange} />
           {errors.message && <p>{errors.message}</p>}
         </StyledFormInput>
-
-        <Button
-          type="Submit"
-          // {!isSubmitted ? (<FormMessageSuccess submitForm={submitForm} /> : )}
-        >
-          Send Message
-        </Button>
+        <Button type="Submit">Send Message</Button>
       </StyledForm>
       <StyledFormInfo>
         <StyledFormText>
@@ -139,6 +129,10 @@ const Form = () => {
       </StyledFormInfo>
     </>
   );
+};
+
+Form.propTypes = {
+  submitForm: PropTypes.func.isRequired,
 };
 
 export default Form;

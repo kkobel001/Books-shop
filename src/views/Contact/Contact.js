@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import UserPageTemplate from '../../templates/UserPageTemplates';
 import Tittlebox from '../../components/atoms/Tittlebox/Tittlebox';
 import Form from './Form';
 import Footer from '../../components/molecules/Footer/Footer';
 import { Container } from '../../theme/GlobalStyle';
-// import FormMessageSuccess from './FormMessageSuccess';
+import FormMessageSuccess from './FormMessageSuccess';
 
 const StyledContainer = styled(Container)`
   ${Container};
@@ -24,21 +24,22 @@ const StyledWrapper = styled.div`
   text-align: center;
 `;
 
-const Contact = () => (
-  <>
-    <UserPageTemplate />
-    <Tittlebox pagename="CONTACT" page="CONTACT" />
-    <StyledContainer>
-      <StyledWrapper>
-        <Form />
-      </StyledWrapper>
-    </StyledContainer>
+const Contact = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-    <Footer />
-  </>
-);
+  function submitForm() {
+    setIsSubmitted(true);
+  }
+  return (
+    <>
+      <UserPageTemplate />
+      <Tittlebox pagename="CONTACT" page="CONTACT" />
+      <StyledContainer>
+        <StyledWrapper>{!isSubmitted ? <Form submitForm={submitForm} /> : <FormMessageSuccess />}</StyledWrapper>
+      </StyledContainer>
+      <Footer />
+    </>
+  );
+};
 
-// Contact.propTypes = {
-//   margL: PropTypes.string.isRequired,
-// };
 export default Contact;

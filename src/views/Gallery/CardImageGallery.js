@@ -13,34 +13,38 @@ const StyledWrapper = styled.div`
   margin-top: 0px;
   background-color: #1100ff;
   height: 700px;
-  /* width: 80%; */
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  display: grid;
 `;
 
-const StyledItem = styled.div`
+const StyledItem = styled.img`
   height: 250px;
   width: 250px;
-
-  display: grid;
+  padding: 20px 20px 20px 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   align-content: center;
-  grid-template-columns: repeat(4, 1fr);
-  /* grid-gap: 10px; */
 `;
 
 const CardImageGallery = () => (
   <StyledContainer>
     <StyledWrapper>
       {imageVege.map(({ id, title, image }) => (
-        <StyledItem title={title} key={id} image={image} />
+        <StyledItem title={title} key={id} src={image} />
       ))}
     </StyledWrapper>
   </StyledContainer>
 );
 
 // CardImageGallery.propTypes = {
-//     pageveg: PropTypes.string.isRequired,
-
+//     title: PropTypes.string.isRequired,
+//     id: PropTypes.string.isRequired,
+//     image: PropTypes.string.isRequired,
 //   };
 
 export default CardImageGallery;

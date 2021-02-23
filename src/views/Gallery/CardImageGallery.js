@@ -3,6 +3,7 @@ import styled from 'styled-components';
 // import PropTypes from 'prop-types';
 import { Container } from '../../theme/GlobalStyle';
 import { imageVege } from './Products';
+import { Button } from '../../components/atoms/Button/Button';
 // import { EffectPage } from '../../components/atoms/EffectPage/EffectPage'
 
 const StyledContainer = styled(Container)`
@@ -10,33 +11,61 @@ const StyledContainer = styled(Container)`
 `;
 
 const StyledWrapper = styled.div`
-  margin-top: 0px;
-  background-color: #1100ff;
+  margin-top: 50px;
   height: 700px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  display: grid;
 `;
 
 const StyledItem = styled.img`
   height: 250px;
   width: 250px;
-  padding: 20px 20px 20px 20px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   align-content: center;
 `;
+const StyledRow = styled.div`
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  display: grid;
+`;
+
+const StyledRowInfo = styled.div`
+  text-align: center;
+
+  & p {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+`;
+const RowButton = styled.div`
+  margin-bottom: 25px;
+
+  ${Button} {
+    margin-left: 15px;
+  }
+`;
 
 const CardImageGallery = () => (
   <StyledContainer>
     <StyledWrapper>
-      {imageVege.map(({ id, title, image }) => (
-        <StyledItem title={title} key={id} src={image} />
-      ))}
+      <StyledRowInfo>
+        <h1>Out Gallery</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+        <RowButton>
+          <Button>All</Button>
+          <Button>Fruits</Button>
+          <Button>Bulbs</Button>
+        </RowButton>
+      </StyledRowInfo>
+      <StyledRow>
+        {imageVege.map(({ id, title, image }) => (
+          <StyledItem title={title} key={id} src={image} />
+        ))}
+        ;
+      </StyledRow>
     </StyledWrapper>
   </StyledContainer>
 );

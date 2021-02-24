@@ -11,12 +11,14 @@ export const imageVege = [
     title: 'Vegetable 1',
     image: image01,
     category: 'Bulb',
+    value: 'Bulb',
   },
   {
     id: 2,
     title: 'Vegetable 2',
     image: image02,
     category: 'Fruits',
+    value: 'Fruits',
   },
 
   {
@@ -24,6 +26,7 @@ export const imageVege = [
     title: 'Vegetable 3',
     image: image03,
     category: 'Bulb',
+    value: 'Bulb',
   },
 
   {
@@ -31,6 +34,7 @@ export const imageVege = [
     title: 'Vegetable ',
     image: image04,
     category: 'Fruits',
+    value: 'Fruits',
   },
 
   {
@@ -38,6 +42,7 @@ export const imageVege = [
     title: 'Vegetable 5',
     image: image05,
     category: 'Bulb',
+    value: 'Bulb',
   },
 
   {
@@ -45,5 +50,6 @@ export const imageVege = [
     title: 'Vegetable 6',
     image: image06,
     category: 'Bulb',
+    value: 'Bulb',
   },
 ];

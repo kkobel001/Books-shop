@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 // import PropTypes from 'prop-types';
 import { Container } from '../../theme/GlobalStyle';
-import { imageVege } from './Products';
+// import { imageVege } from './Products';
 import { Button } from '../../components/atoms/Button/Button';
+import FilterImage from './FilterImage';
 // import { EffectPage } from '../../components/atoms/EffectPage/EffectPage'
 
 const StyledContainer = styled(Container)`
@@ -11,26 +12,27 @@ const StyledContainer = styled(Container)`
 `;
 
 const StyledWrapper = styled.div`
-  margin-top: 50px;
+  /* margin-top: 50px;
   height: 700px;
   width: 80%;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
 `;
 
-const StyledItem = styled.img`
-  height: 250px;
-  width: 250px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  align-content: center;
-`;
-const StyledRow = styled.div`
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  display: grid;
-`;
+// const StyledItem = styled.img`
+//   height: 250px;
+//   width: 250px;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center center;
+//   align-content: center;
+//   margin-bottom:20px;
+// `;
+// const StyledRow = styled.div`
+//   grid-template-columns: repeat(4, 1fr);
+//   grid-gap: 10px;
+//   display: grid;
+// `;
 
 const StyledRowInfo = styled.div`
   text-align: center;
@@ -55,17 +57,15 @@ const CardImageGallery = () => (
         <h1>Out Gallery</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
         <RowButton>
-          <Button>All</Button>
-          <Button>Fruits</Button>
-          <Button>Bulbs</Button>
+          <FilterImage />
         </RowButton>
       </StyledRowInfo>
-      <StyledRow>
+      {/* <StyledRow>
         {imageVege.map(({ id, title, image }) => (
           <StyledItem title={title} key={id} src={image} />
         ))}
         ;
-      </StyledRow>
+      </StyledRow> */}
     </StyledWrapper>
   </StyledContainer>
 );

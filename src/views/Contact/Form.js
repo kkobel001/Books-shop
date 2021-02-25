@@ -7,50 +7,34 @@ import useForm from './useForm';
 import validate from './validateInfo';
 import orangeFruit from '../../assets/images/instagram-img-03.jpg';
 
-const StyledFormInfo = styled.div`
-  background: url(${orangeFruit});
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  padding: 50px;
-  flex: 40%;
-  color: #ffffff;
-  justify-content: center;
-
-  position: relative;
-  width: 100%;
-
-  ::before {
-    background: rgba(0, 0, 0, 0.8);
-    content: ''; // ::before and ::after both require content
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    z-index: 0;
-  }
-`;
-
 const StyledForm = styled.form`
   background-color: #f1f1f1;
   padding: 50px;
   flex: 60%;
+  @media screen and (max-width: 1400px) {
+    flex: 100%;
+  }
 `;
 const StyledFormInput = styled.div`
   line-height: 60px;
 
   /* &::placeholder{
-    background-color: #015B2D;
-  } */
+  background-color: #015B2D;
+} */
+`;
+const StyledLabel = styled.div`
+  /* display: inline-block; */
+  width: 100%;
+  margin-bottom: 3px;
+
+  & p {
+    text-align: left;
+  }
 `;
 const StyledInput = styled.input`
   margin-top: auto;
   color: #064e2a;
-  display: block;
+  /* display: block; */
   padding-left: 10px;
   outline: none;
   border-radius: 2px;
@@ -63,6 +47,41 @@ const StyledInput = styled.input`
     font-size: 12px;
   }
 `;
+const StyledFormInfo = styled.div`
+  background: url(${orangeFruit});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  padding: 50px;
+  flex: 40%;
+  color: #ffffff;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+  ::before {
+    background: rgba(0, 0, 0, 0.8);
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 0;
+  }
+  @media screen and (max-width: 1400px) {
+    height: 300px;
+    margin-top: 50px;
+  }
+  @media screen and (max-width: 1280px) {
+    /* display: block;
+      width: 100%; */
+  }
+`;
+
 const StyledFormText = styled.div`
   position: relative;
   padding-top: 85px;
@@ -74,14 +93,14 @@ const StyledFormText = styled.div`
     text-align: justify;
     margin-bottom: 15px;
   }
-`;
-const StyledLabel = styled.div`
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 3px;
 
-  & p {
-    text-align: left;
+  @media screen and (max-width: 1400px) {
+    padding: 0px;
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+  @media screen and (max-width: 605px) {
+    font-size: 13px;
   }
 `;
 

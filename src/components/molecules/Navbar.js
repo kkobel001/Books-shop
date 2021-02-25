@@ -46,11 +46,6 @@ const Navbar = () => {
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks exact to="/shop" activeclass="active">
-                Shop
-              </NavLinks>
-            </NavItem>
-            <NavItem>
               <NavLinks exact to="/gallery" activeclass="active">
                 Gallery
               </NavLinks>

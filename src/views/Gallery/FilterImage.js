@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Button } from '../../components/atoms/Button/Button';
-// import { Container } from '../../theme/GlobalStyle';
+import { Container } from '../../theme/GlobalStyle';
 import { imageVege } from './Products';
 
 const buttons = [
@@ -9,31 +9,70 @@ const buttons = [
   { name: 'Bulb', value: 'Bulb' },
   { name: 'Fruits', value: 'Fruits' },
 ];
-// const StyledContainer = styled(Container)`
-//   ${Container};
-// `;
 
-const StyledWrapper = styled.div`
-  margin-top: 50px;
-  height: 700px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+const StyledContainer = styled(Container)`
+  ${Container};
+  margin-bottom: 120px;
 `;
+
+const StyledRenderRow = styled.div`
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  display: grid;
+
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 999px) {
+    display: block;
+  }
+`;
+
 const StyledItem = styled.img`
-  height: 250px;
-  width: 250px;
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   align-content: center;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 999px) {
+    height: 50%;
+    width: 50%;
+  }
+`;
+
+const StyledWrapper = styled.div`
+  margin-top: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const StyledRow = styled.div`
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  display: grid;
+  margin-top: 50px;
+
+  @media screen and (max-width: 999px) {
+    text-align: center;
+    justify-content: center;
+  }
+`;
+const StyledRowInfo = styled.div`
+  text-align: center;
+
+  & p {
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+`;
+const RowButton = styled.div`
+  margin-bottom: 25px;
+  align-items: center;
+
+  ${Button} {
+    margin-left: 15px;
+  }
 `;
 
 class FilterImage extends Component {
@@ -71,23 +110,29 @@ class FilterImage extends Component {
     const { filteredProducts } = this.state;
 
     const renderAll = filteredProducts.map(product => (
-      <StyledWrapper>
-        <StyledRow>
-          <StyledItem title={product.category} key={product.id} src={product.image} />
-        </StyledRow>
-      </StyledWrapper>
+      <StyledRow>
+        <StyledItem title={product.category} key={product.id} src={product.image} />
+      </StyledRow>
     ));
 
     return (
-      <div>
-        {buttons.map(({ name, value }) => (
-          <Button type="button" key={name} value={value} onClick={this.handleClick(name)}>
-            {name}
-          </Button>
-        ))}
+      <StyledContainer>
+        <StyledWrapper>
+          <StyledRowInfo>
+            <h1>Out Gallery</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
 
-        {renderAll}
-      </div>
+            <RowButton>
+              {buttons.map(({ name, value }) => (
+                <Button type="button" key={name} value={value} onClick={this.handleClick(name)}>
+                  {name}
+                </Button>
+              ))}
+            </RowButton>
+          </StyledRowInfo>
+          <StyledRenderRow>{renderAll}</StyledRenderRow>
+        </StyledWrapper>
+      </StyledContainer>
     );
   }
 }

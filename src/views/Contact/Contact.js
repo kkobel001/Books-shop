@@ -9,12 +9,20 @@ import FormMessageSuccess from './FormMessageSuccess';
 
 const StyledContainer = styled(Container)`
   ${Container};
-  height: 700px;
+  height: 100%;
   justify-content: center;
+
+  @media screen and (min-width: 1580px) {
+    height: auto;
+  }
+  @media screen and (min-width: 1280px) {
+    display: block;
+    width: 70%;
+  }
 `;
 const StyledWrapper = styled.div`
   width: 80%;
-  height: 550px;
+  /* height: 550px; */
   margin-top: 150px;
   margin-bottom: 150px;
   margin-left: auto;
@@ -37,6 +45,7 @@ const Contact = () => {
       <StyledContainer>
         <StyledWrapper>{!isSubmitted ? <Form submitForm={submitForm} /> : <FormMessageSuccess />}</StyledWrapper>
       </StyledContainer>
+
       <Footer />
     </>
   );

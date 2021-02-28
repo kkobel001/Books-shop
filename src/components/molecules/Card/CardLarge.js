@@ -14,6 +14,7 @@ const StyledContainer = styled(Container)`
   padding-top: 90px;
   padding-bottom: 90px;
   ${Container};
+  width: auto;
 `;
 
 const StyledWrapper = styled.div`
@@ -22,7 +23,6 @@ const StyledWrapper = styled.div`
   display: grid;
   align-content: center;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-gap: 50px; */
   justify-items: center;
   margin-left: auto;
   margin-right: auto;

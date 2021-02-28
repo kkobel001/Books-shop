@@ -6,6 +6,14 @@ import { Button } from '../../atoms/Button/Button';
 
 const StyledContainer = styled(Container)`
   ${Container}
+  width:100%;
+  justify-content: center;
+
+  @media screen and (min-width: 1580px) {
+    height: auto;
+  }
+  @media screen and (min-width: 1280px) {
+  }
 `;
 
 const StyledWrapper = styled.div`
@@ -62,7 +70,7 @@ const Text = styled.div`
     width: 690px;
   }
   @media screen and (max-width: 830px) {
-    padding: 40px 40px 40px 40px;
+    width: 90%;
   }
 `;
 
@@ -74,7 +82,20 @@ const StyledList = styled.ul`
   margin-top: 60px;
   height: 170px;
   text-align: center;
-  width: 100%;
+  width: auto;
+  height: auto;
+
+  & h2 {
+    margin-top: 4px;
+  }
+
+  & p {
+    line-height: 140%;
+    height: 100%;
+    margin-top: 30px;
+    text-align: justify;
+    padding: 0px 15px 15px 15px;
+  }
 
   & li {
     max-width: 350px;
@@ -111,16 +132,8 @@ const StyledList = styled.ul`
       width: 100%;
     }
   }
-  & h2 {
-    margin-top: 4px;
-  }
-
-  & p {
-    line-height: 140%;
-    height: 100%;
-    margin-top: 30px;
-    text-align: justify;
-    padding: 0px 15px 15px 15px;
+  @media screen and (max-width: 528px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 

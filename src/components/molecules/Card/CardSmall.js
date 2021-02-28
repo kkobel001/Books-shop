@@ -5,11 +5,10 @@ import Img02 from '../../../assets/images/add-img-02.jpg';
 import { Container } from '../../../theme/GlobalStyle';
 
 const CardContainer = styled(Container)`
-  height: 100%;
+  /* height: 100%; */
   padding-right: 0px;
   padding-left: 0px;
   width: 100%;
-
   ${Container}
 
   @media screen and (max-width: 1290px) {
@@ -21,8 +20,8 @@ const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.light};
   padding-top: 70px;
   padding-bottom: 70px;
-  height: 100%;
-  width: 100%;
+  /* height: 100%;
+  width: 100%; */
   display: grid;
   align-content: center;
   grid-template-columns: auto auto;
@@ -34,7 +33,7 @@ const StyledWrapper = styled.div`
 `;
 
 const CardItem = styled.div`
-  width: 543px;
+  width: 70%;
   height: 360px;
   margin-left: auto;
   margin-right: auto;
@@ -46,7 +45,6 @@ const CardItem = styled.div`
     transition: 500ms linear;
   }
   @media screen and (max-width: 1290px) {
-    height: 100%;
     margin-top: 20px;
     display: block;
   }
@@ -55,6 +53,12 @@ const CardItem = styled.div`
 const CardItemImage = styled.img`
   height: 310px;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 640px) {
+    /* padding: 40px 0px 40px 0px; */
+    hight: 80%;
+    width: 90%;
+  }
 `;
 const CardSmall = () => (
   <CardContainer>

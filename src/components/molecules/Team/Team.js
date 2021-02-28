@@ -29,6 +29,7 @@ const StyledWrapper = styled.div`
   }
   @media screen and (max-width: 821px) {
     grid-template-columns: repeat(1, 1fr);
+    align-items: center;
   }
 `;
 

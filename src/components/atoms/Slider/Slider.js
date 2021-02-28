@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { SliderImages } from './SliderImages';
 
@@ -23,30 +23,39 @@ const proprietes = {
 };
 const StyledImage = styled.div`
   height: 700px;
-  width: 100%;
-  overflow: visible;
   background-image: url(${SliderImages});
 `;
 const StyledArrowBackIosIcon = styled.div`
   position: absolute;
   top: 50%;
-  left: 32px;
-  font-size: 3rem;
-  color: #000;
+  left: 42px;
+  font-size: 15px;
+  color: #000000;
   z-index: 10;
   cursor: pointer;
   user-select: none;
-  border-radius: 2px sollid #000;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.primary};
+  &:hover {
+    transition: all 0.3s ease-out;
+    background-color: #808080;
+  }
 `;
 const StyledRightIcon = styled.div`
   position: absolute;
   top: 50%;
-  right: 32px;
-  font-size: 3rem;
-  color: #000;
+  right: 42px;
+  font-size: 15px;
+  color: #000000;
   z-index: 10;
   cursor: pointer;
   user-select: none;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.primary};
+  &:hover {
+    transition: all 0.3s ease-out;
+    background-color: #808080;
+  }
 `;
 
 function Slider({ slides }) {
@@ -67,7 +76,7 @@ function Slider({ slides }) {
   return (
     <StyledSrapperSlider {...proprietes}>
       <StyledArrowBackIosIcon>
-        <ArrowBackIosIcon onClick={prevSlide} />
+        <ChevronLeftIcon onClick={prevSlide} />
       </StyledArrowBackIosIcon>
       <StyledRightIcon>
         <ChevronRightIcon onClick={nextSlide} />

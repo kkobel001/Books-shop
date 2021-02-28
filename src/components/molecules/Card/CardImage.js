@@ -16,7 +16,7 @@ const CardContainer = styled(Container)`
   ${Container}
 `;
 const StyledWrapper = styled.div`
-  height: 100%;
+  height: auto;
   width: 100%;
   display: grid;
   align-content: center;

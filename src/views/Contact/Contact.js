@@ -22,7 +22,6 @@ const StyledContainer = styled(Container)`
 `;
 const StyledWrapper = styled.div`
   width: 80%;
-  /* height: 550px; */
   margin-top: 150px;
   margin-bottom: 150px;
   margin-left: auto;

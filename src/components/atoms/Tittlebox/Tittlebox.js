@@ -27,10 +27,9 @@ const StyledBox = styled.div`
 
 const StyledRow = styled.div`
   position: relative;
-  width: 70%;
+  width: 50%;
   height: 60px;
   background-color: transparent;
-  z-index: 99999;
   display: grid;
   grid-template-columns: 70% 30%;
   grid-gap: 1em;
@@ -47,7 +46,7 @@ const StyledRow = styled.div`
   & ul {
     list-style-type: none;
     font-size: 18px;
-    background-color: #bac237;
+    background-color: ${({ theme }) => theme.primary};
     padding: 15px 15px 15px 15px;
     width: 200px;
   }
@@ -60,8 +59,8 @@ const StyledRow = styled.div`
 
     ::before {
       content: ' /';
-      padding-left: 5px;
-      padding-right: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 
@@ -69,10 +68,18 @@ const StyledRow = styled.div`
     text-decoration: none;
     color: #ffffff;
   }
-`;
+  @media screen and (max-width: 600px) {
+    display: block;
 
-const StyledButtom = styled.div`
-  float: left;
+    & ul {
+      margin-top: 8px;
+      text-align: center;
+      height: 50px;
+    }
+
+    & li {
+    }
+  }
 `;
 
 const Tittlebox = ({ pagename, page }) => (
@@ -87,10 +94,6 @@ const Tittlebox = ({ pagename, page }) => (
           <p>{page}</p>
         </li>
       </ul>
-      <StyledButtom>
-        {/* <Link to="./" />
-         */}
-      </StyledButtom>
     </StyledRow>
   </StyledBox>
 );

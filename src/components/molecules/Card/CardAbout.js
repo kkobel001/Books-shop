@@ -5,16 +5,11 @@ import aboutImg from '../../../assets/images/about-img.jpg';
 import { Button } from '../../atoms/Button/Button';
 
 const StyledContainer = styled(Container)`
-  margin: auto;
-  height: 100%;
-  width: 100%;
-
   ${Container}
 `;
 
 const StyledWrapper = styled.div`
   width: 80%;
-
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -41,6 +36,10 @@ const StyledAboutImg = styled.img`
     margin-right: 0px;
     margin-bottom: 30px;
   }
+  @media screen and (max-width: 830px) {
+    height: 90%;
+    width: 90%;
+  }
 `;
 
 const Text = styled.div`
@@ -61,6 +60,9 @@ const Text = styled.div`
     margin-bottom: 80px;
     font-size: 13px;
     width: 690px;
+  }
+  @media screen and (max-width: 830px) {
+    padding: 40px 40px 40px 40px;
   }
 `;
 

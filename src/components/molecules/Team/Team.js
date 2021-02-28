@@ -9,23 +9,31 @@ import human03 from '../../../assets/images/img-3.jpg';
 const StyledContainer = styled(Container)`
   margin-top: 100px;
   margin-bottom: 100px;
+  width: 100%;
   ${Container}
 `;
 const StyledWrapper = styled.div`
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-gap: 50px;
+  grid-gap: 40px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
   width: 80%;
 
-  @media screen and (min-width: 1500px) {
+  @media screen and (max-width: 1500px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 1245px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 821px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 
 const TeamContent = styled.div`
-  color: #fff;
+  color: #ffffff;
   width: 85%;
   filter: blur(5px);
   opacity: 0;
@@ -45,10 +53,6 @@ const TeamContent = styled.div`
     margin-left: auto;
     margin-right: auto;
   }
-
-  & p {
-    line-height: 200%;
-  }
 `;
 const StyledItem = styled.div`
   width: 270px;
@@ -62,9 +66,9 @@ const StyledItem = styled.div`
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
 
   & p {
-    line-height: 150%;
+    line-height: 200%;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   ::before,

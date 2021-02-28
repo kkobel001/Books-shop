@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
@@ -18,12 +17,9 @@ const StyledWrapper = styled.div`
   & ul {
     height: 100%;
     list-style-type: none;
-    /* padding-left:40px;
-    padding-right:40px; */
   }
   & li {
     float: left;
-    /* height: 34px; */
     width: 34px;
     margin-right: 3px;
     text-align: center;

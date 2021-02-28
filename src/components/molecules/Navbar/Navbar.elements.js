@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import { Container } from '../../theme/GlobalStyle';
+import { Container } from '../../../theme/GlobalStyle';
 
 export const Nav = styled.div`
   position: sticky;
-  z-index: 999;
+  z-index: 99999;
   font-size: 20px;
   justify-content: center;
   height: 100px;
@@ -16,7 +16,7 @@ export const Nav = styled.div`
 export const NavbarConteiner = styled(Container)`
   display: flex;
   justify-content: space-between;
-
+  overflow: visible;
   ${Container}
 `;
 export const NavLogo = styled.div`
@@ -73,6 +73,7 @@ export const NavMenu = styled.ul`
   }
 
   @media screen and (max-width: 960px) {
+    overflow: visible;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -95,7 +96,6 @@ export const NavLinks = styled(NavLink)`
   margin-bottom: auto;
 
   &:hover {
-    /* border-bottom: 2px solid #bac237; */
     color: #bac237;
   }
 

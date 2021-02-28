@@ -5,13 +5,11 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import InstagramIcon from '@material-ui/icons/Instagram';
-// import {margL} from '../../theme/Margintheme';
 
 const StyledWrapper = styled.div`
   height: 37px;
   width: 100%px;
   text-align: center;
- /* margin-left: ${({ margL }) => (margL ? '40px' : '30px')}; */
 `;
 
 const Styledul = styled.ul`

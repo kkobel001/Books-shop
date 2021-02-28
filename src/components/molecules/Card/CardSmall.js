@@ -6,7 +6,6 @@ import { Container } from '../../../theme/GlobalStyle';
 
 const CardContainer = styled(Container)`
   height: 100%;
-
   padding-right: 0px;
   padding-left: 0px;
   width: 100%;
@@ -19,11 +18,9 @@ const CardContainer = styled(Container)`
 `;
 
 const StyledWrapper = styled.div`
-/* background-color: ${({ theme }) => theme.dark}; */
-  background-color: rgb(244, 244, 244);
+  background-color: ${({ theme }) => theme.light};
   padding-top: 70px;
   padding-bottom: 70px;
-
   height: 100%;
   width: 100%;
   display: grid;
@@ -31,12 +28,9 @@ const StyledWrapper = styled.div`
   grid-template-columns: auto auto;
   grid-gap: 10px;
 
-
-@media screen and (max-width: 1290px) {
-     display: block;
-
-  } 
-
+  @media screen and (max-width: 1290px) {
+    display: block;
+  }
 `;
 
 const CardItem = styled.div`

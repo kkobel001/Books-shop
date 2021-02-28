@@ -82,8 +82,6 @@ const StyledButton = styled(Button)`
 
 const InfoFooter = styled.div`
   text-align: center;
-  /* font-size: 14px; */
-  /* background-color: #060606; */
   width: 100%;
   height: 40px;
   color: #ffffff;

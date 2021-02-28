@@ -48,10 +48,6 @@ const StyledRightIcon = styled.div`
   cursor: pointer;
   user-select: none;
 `;
-// const StyledButton= styled(Button)`
-// margin-right:300px;
-// z-index:9999;
-// `;
 
 function Slider({ slides }) {
   const [current, setCurrent] = useState(0);
@@ -76,12 +72,6 @@ function Slider({ slides }) {
       <StyledRightIcon>
         <ChevronRightIcon onClick={nextSlide} />
       </StyledRightIcon>
-      {/* <StyledButton>
-
-      <Button>
-        Buy it !
-      </Button> 
-</StyledButton>  */}
       {SliderImages.map(slide => (
         <div className={slide.id === current ? '<slideactive />' : '<slide />'} key={slide.id}>
           {slide.id === current && (

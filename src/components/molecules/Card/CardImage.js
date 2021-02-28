@@ -13,9 +13,7 @@ const CardContainer = styled(Container)`
   padding-bottom: 90px;
   position: relative;
 
-  ${Container} /* @media screen and (max-width: 1290px) {
-    height: 1500px;
-  } */
+  ${Container}
 `;
 const StyledWrapper = styled.div`
   height: 100%;
@@ -48,7 +46,6 @@ const CardText = styled.div`
 `;
 
 const CardItem = styled.div`
-  /* background-color: rgba(255, 255, 255, 0.8); */
   border: 1px dot rgba(0, 0, 0, 0.8);
   font-size: 25px;
   height: 400px;
@@ -94,7 +91,7 @@ function CardImage({ name }) {
             <CardItemImage src={im02} alt="categories" />
             <CardText>{name}</CardText>
           </a>
-        </CardItem>{' '}
+        </CardItem>
         <CardItem>
           <a href="./">
             <CardItemImage src={im03} alt="categories" />

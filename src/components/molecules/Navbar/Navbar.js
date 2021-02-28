@@ -4,7 +4,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import LogoIcon from '../../../assets/images/logo.jpg';
 import { Button } from '../../atoms/Button/Button';
-import { Nav, NavbarConteiner, NavLogo, LogoImg, MobileIcon, NavMenu, NavItem, NavLinks, NavItemBtn, NavBtnLink, NavLinksLogo } from '../Navbar.elements';
+import { Nav, NavbarConteiner, NavLogo, LogoImg, MobileIcon, NavMenu, NavItem, NavLinks, NavItemBtn, NavBtnLink, NavLinksLogo } from './Navbar.elements';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -43,11 +43,6 @@ const Navbar = () => {
             <NavItem>
               <NavLinks exact to="/about" activeclass="active">
                 About
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks exact to="/shop" activeclass="active">
-                Shop
               </NavLinks>
             </NavItem>
             <NavItem>

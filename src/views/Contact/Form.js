@@ -17,13 +17,8 @@ const StyledForm = styled.form`
 `;
 const StyledFormInput = styled.div`
   line-height: 60px;
-
-  /* &::placeholder{
-  background-color: #015B2D;
-} */
 `;
 const StyledLabel = styled.div`
-  /* display: inline-block; */
   width: 100%;
   margin-bottom: 3px;
 
@@ -42,7 +37,6 @@ const StyledInput = styled.input`
   width: 100%;
   border: none;
 
-  /* background-color: #015b2d; */
   &::placeholder {
     font-size: 12px;
   }
@@ -90,7 +84,7 @@ const StyledFormText = styled.div`
 
   & p {
     line-height: 200%;
-    text-align: justify;
+    /* text-align: justify; */
     margin-bottom: 15px;
   }
 
@@ -112,14 +106,14 @@ const Form = ({ submitForm }) => {
         <h1>GET IN TOUCH</h1>
         <StyledFormInput>
           <StyledLabel htmlFor="username">
-            <p>Your name</p>
+            <p>Your name*</p>
           </StyledLabel>
           <StyledInput id="username" type="text" name="username" placeholder=" Enter your name" value={values.username} onChange={handleChange} />
           {errors.username && <p>{errors.username}</p>}
         </StyledFormInput>
         <StyledFormInput>
           <StyledLabel htmlFor="email">
-            <p>Your Email</p>
+            <p>Your Email*</p>
           </StyledLabel>
           <StyledInput id="email" type="email" name="email" placeholder="Enter your username" value={values.email} onChange={handleChange} />
           {errors.email && <p>{errors.email}</p>}
@@ -132,12 +126,13 @@ const Form = ({ submitForm }) => {
         </StyledFormInput>
         <StyledFormInput>
           <StyledLabel htmlFor="email">
-            <p>Your Email</p>
+            <p>Your message*</p>
           </StyledLabel>
           <StyledInput id="message" type="message" name="message" placeholder="Enter your your message" value={values.message} onChange={handleChange} />
           {errors.message && <p>{errors.message}</p>}
         </StyledFormInput>
         <Button type="Submit">Send Message</Button>
+        <p>* It is requiet</p>
       </StyledForm>
       <StyledFormInfo>
         <StyledFormText>

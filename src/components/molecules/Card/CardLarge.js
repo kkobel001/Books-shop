@@ -9,12 +9,12 @@ import ButtonIcon from '../../atoms/ButtonIcon/ButtonIcon';
 import { Container } from '../../../theme/GlobalStyle';
 
 const StyledContainer = styled(Container)`
-  height: 100%;
+  /* height: 100%; */
   background-color: #fafafa;
   padding-top: 90px;
   padding-bottom: 90px;
   ${Container};
-  width: auto;
+  width: 100%;
 `;
 
 const StyledWrapper = styled.div`
@@ -31,6 +31,9 @@ const StyledWrapper = styled.div`
   @media screen and (max-width: 1290px) {
     display: block;
   }
+  @media screen and (max-width: 640px) {
+    /* width: 150px; */
+  }
 `;
 
 const CardItem = styled.div`
@@ -44,10 +47,18 @@ const CardItem = styled.div`
   @media screen and (max-width: 1290px) {
     margin-top: 20px;
   }
+  @media screen and (max-width: 500px) {
+    width: 250px;
+    height: 500px;
+  }
 `;
 const CardItemImage = styled.img`
   height: 300px;
   width: 350px;
+  @media screen and (max-width: 500px) {
+    width: 250px;
+    height: 200px;
+  }
 `;
 
 const CardText = styled.div`
@@ -78,7 +89,6 @@ function CardLarge({ title, about }) {
         <CardItem>
           <CardItemImage src={blog01} alt="blogimg" />
           <CardText>
-            {' '}
             <h1>{title}</h1>
             {about}
           </CardText>

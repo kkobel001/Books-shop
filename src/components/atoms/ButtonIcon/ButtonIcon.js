@@ -8,11 +8,14 @@ import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 const StyledWrapper = styled.div`
   justify-content: center;
   height: 34px;
-  width: 350px;
+  /* width: 350px; */
   margin-top: 30px;
   padding-left: 120px;
   border-radius: ${({ light }) => (light ? '#ffffff' : '')} & a {
     text-decoration: none;
+  }
+  @media screen and (max-width: 500px) {
+    padding-left: 70px;
   }
   & ul {
     height: 100%;

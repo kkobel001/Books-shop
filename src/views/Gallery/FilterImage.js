@@ -29,17 +29,17 @@ const StyledRenderRow = styled.div`
 `;
 
 const StyledItem = styled.img`
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: 450px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   align-content: center;
   margin-bottom: 20px;
 
-  @media screen and (max-width: 999px) {
-    height: 50%;
-    width: 50%;
+  @media screen and (max-width: 727px) {
+    height: auto;
+    width: 100%;
   }
 `;
 
@@ -55,7 +55,6 @@ const StyledRow = styled.div`
 
   @media screen and (max-width: 999px) {
     text-align: center;
-    justify-content: center;
   }
 `;
 const StyledRowInfo = styled.div`
@@ -72,6 +71,7 @@ const RowButton = styled.div`
 
   ${Button} {
     margin-left: 15px;
+    margin-bottom: 20px;
   }
 `;
 

@@ -19,7 +19,7 @@ const StyledWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  width: 80%;
+  /* width: 80%; */
 
   @media screen and (max-width: 1500px) {
     grid-template-columns: repeat(3, 1fr);
@@ -65,6 +65,9 @@ const StyledItem = styled.div`
   margin-left: auto;
   margin-right: auto;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
+  @media screen and (max-width: 330px) {
+    width: 100%;
+  }
 
   & p {
     line-height: 200%;

@@ -55,8 +55,7 @@ const CardItemImage = styled.img`
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
 
   @media screen and (max-width: 640px) {
-    /* padding: 40px 0px 40px 0px; */
-    hight: 80%;
+    height: 50%;
     width: 90%;
   }
 `;

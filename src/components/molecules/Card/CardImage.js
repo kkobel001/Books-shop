@@ -29,7 +29,7 @@ const StyledWrapper = styled.div`
 
 const CardItemImage = styled.img`
   width: 100%;
-  height: 90%;
+  /* height: 90%; */
 `;
 
 const CardText = styled.div`
@@ -73,6 +73,8 @@ const CardItem = styled.div`
   }
   @media screen and (max-width: 1290px) {
     margin-bottom: 60px;
+    height: 300px;
+    width: 250px;
   }
 `;
 

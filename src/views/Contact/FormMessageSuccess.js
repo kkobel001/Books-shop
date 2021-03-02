@@ -14,8 +14,8 @@ const StyledContainer = styled(Container)`
 
 const StyledWrapper = styled.div`
   justify-content: center;
-  height: 550px;
-  width: 700px;
+  /* height: 550px;
+  width: 700px; */
   margin: auto auto auto auto;
 
   & h2 {
@@ -36,6 +36,11 @@ const StyledMes = styled.img`
   height: 400px;
   box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 10px;
+
+  @media screen and (max-width: 500px) {
+    height: auto;
+    width: 60%;
+  }
 `;
 
 const FormMessageSuccess = () => (

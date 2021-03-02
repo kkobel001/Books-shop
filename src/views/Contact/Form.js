@@ -28,8 +28,7 @@ const StyledLabel = styled.div`
 `;
 const StyledInput = styled.input`
   margin-top: auto;
-  color: #064e2a;
-  /* display: block; */
+  color: ${({ theme }) => theme.dark};
   padding-left: 10px;
   outline: none;
   border-radius: 2px;
@@ -70,9 +69,8 @@ const StyledFormInfo = styled.div`
     height: 300px;
     margin-top: 50px;
   }
-  @media screen and (max-width: 1280px) {
-    /* display: block;
-      width: 100%; */
+  @media screen and (max-width: 500px) {
+    height: auto;
   }
 `;
 
@@ -84,7 +82,6 @@ const StyledFormText = styled.div`
 
   & p {
     line-height: 200%;
-    /* text-align: justify; */
     margin-bottom: 15px;
   }
 
@@ -96,6 +93,11 @@ const StyledFormText = styled.div`
   @media screen and (max-width: 605px) {
     font-size: 13px;
   }
+`;
+
+const StyledButton = styled(Button)`
+  margin-bottom: 10px;
+  margin-top: 20px;
 `;
 
 const Form = ({ submitForm }) => {
@@ -128,11 +130,11 @@ const Form = ({ submitForm }) => {
           <StyledLabel htmlFor="email">
             <p>Your message*</p>
           </StyledLabel>
-          <StyledInput id="message" type="message" name="message" placeholder="Enter your your message" value={values.message} onChange={handleChange} />
+          <StyledInput id="message" type="textarea" name="message" placeholder="Enter your your message" maxLength={60} value={values.message} onChange={handleChange} />
           {errors.message && <p>{errors.message}</p>}
         </StyledFormInput>
-        <Button type="Submit">Send Message</Button>
-        <p>* It is requiet</p>
+        <StyledButton type="Submit">Send Message</StyledButton>
+        <p>* It is obligatory</p>
       </StyledForm>
       <StyledFormInfo>
         <StyledFormText>

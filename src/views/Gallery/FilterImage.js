@@ -30,7 +30,7 @@ const StyledRenderRow = styled.div`
 
 const StyledItem = styled.img`
   height: auto;
-  width: 450px;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -111,7 +111,7 @@ class FilterImage extends Component {
 
     const renderAll = filteredProducts.map(product => (
       <StyledRow>
-        <StyledItem title={product.category} key={product.id} src={product.image} />
+        <StyledItem key={product.id} title={product.category} src={product.image} />
       </StyledRow>
     ));
 

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import { SliderImages } from './SliderImages';
 
 const StyledSrapperSlider = styled.div`
   position: relative;
@@ -82,7 +81,7 @@ function Slider({ slides }) {
       <StyledRightIcon>
         <ChevronRightIcon onClick={nextSlide} />
       </StyledRightIcon>
-      {SliderImages.map(slide => (
+      {slides.map(slide => (
         <div className={slide.id === current ? '<slideactive />' : '<slide />'} key={slide.id}>
           {slide.id === current && <StyledImage src={slide.image} alt="banner" />}
         </div>

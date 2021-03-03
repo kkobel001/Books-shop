@@ -17,13 +17,14 @@ const StyledSrapperSlider = styled.div`
   overflow: hidden;
   transition-duration: 500;
 `;
-const proprietes = {
+const properties = {
   indicators: true,
   scale: 1.4,
 };
-const StyledImage = styled.div`
+const StyledImage = styled.img`
   height: 700px;
-  background-image: url(${SliderImages});
+  width: 100%;
+  object-fit: cover;
 `;
 const StyledArrowBackIosIcon = styled.div`
   position: absolute;
@@ -74,7 +75,7 @@ function Slider({ slides }) {
     return null;
   }
   return (
-    <StyledSrapperSlider {...proprietes}>
+    <StyledSrapperSlider {...properties}>
       <StyledArrowBackIosIcon>
         <ChevronLeftIcon onClick={prevSlide} />
       </StyledArrowBackIosIcon>
@@ -83,11 +84,7 @@ function Slider({ slides }) {
       </StyledRightIcon>
       {SliderImages.map(slide => (
         <div className={slide.id === current ? '<slideactive />' : '<slide />'} key={slide.id}>
-          {slide.id === current && (
-            <StyledImage>
-              <img src={slide.image} alt="banner" />
-            </StyledImage>
-          )}
+          {slide.id === current && <StyledImage src={slide.image} alt="banner" />}
         </div>
       ))}
     </StyledSrapperSlider>
@@ -97,4 +94,5 @@ function Slider({ slides }) {
 Slider.propTypes = {
   slides: PropTypes.shape([]).isRequired,
 };
+
 export default Slider;
